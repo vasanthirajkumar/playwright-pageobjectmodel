@@ -1,5 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../../pages/login';
+import { getByPlaceholder } from '@playwright/test';
+
 
 test('test', async ({ page }) => {
     const Login = new LoginPage(page)
@@ -12,7 +14,7 @@ test('test', async ({ page }) => {
     // await page.getByPlaceholder('Username').click();
     // await page.getByPlaceholder('Username').fill('rajkumarv');
     // await page.getByPlaceholder('Username').press('Tab');
-    // await page.getByPlaceholder('Password').fill('Vasuvelu11!2');
+    // await page.getByPlaceholder('Password').fill('Password11');
     // await page.getByPlaceholder('Password').press('Tab');
     // await page.getByPlaceholder('Client\'s e-mail address').fill('v.rajkumar@elsevier.com');
     // await page.getByLabel('Submit').click();

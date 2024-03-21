@@ -1,11 +1,13 @@
-exports.LoginPage = class LoginPage {
+export class LoginPage {
 
     constructor(page) {
-        this.page = page
-        this.adminusername_textbox = getByPlaceholder('Username')
-        this.adminpassword_textbox = getByPlaceholder('Password')
-        this.clientemail_textbox = getByPlaceholder('Client\'s e-mail address')
-        this.submit_button = getByLabel('Submit')
+        this.page = page;
+        this.adminusername_textbox = getByPlaceholder('Username');
+        this.adminpassword_textbox = getByPlaceholder('Password');
+        this.clientemail_textbox = getByPlaceholder('Client\'s e-mail address');
+        //this.clientemail_textbox = getByID('clients-email') 
+        //this.clientemail_textbox = getByXpath('/html/body/div/div/div/form/div[3]/input')
+        this.submit_button = getByLabel('Submit');
     }
 
     async gotoLoginpage() {
