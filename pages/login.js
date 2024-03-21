@@ -2,12 +2,12 @@ export class LoginPage {
 
     constructor(page) {
         this.page = page;
-        this.adminusername_textbox = getByPlaceholder('Username');
-        this.adminpassword_textbox = getByPlaceholder('Password');
-        this.clientemail_textbox = getByPlaceholder('Client\'s e-mail address');
+        this.page.adminusername_textbox = page.getByPlaceholder('Username');
+        this.page.adminpassword_textbox = page.getByPlaceholder('Password');
+        this.page.clientemail_textbox = page.getByPlaceholder('Client\'s e-mail address');
         //this.clientemail_textbox = getByID('clients-email') 
         //this.clientemail_textbox = getByXpath('/html/body/div/div/div/form/div[3]/input')
-        this.submit_button = getByLabel('Submit');
+        this.page.submit_button = page.getByLabel('Submit');
     }
 
     async gotoLoginpage() {
@@ -15,9 +15,9 @@ export class LoginPage {
     }
 
     async login(username,password,clientemail) {
-        await this.adminusername_textbox.fill(username)
-        await this.adminpassword_textbox.fill(password)
-        await this.clientemail_textbox.fill(clientemail)
-        await this.submit_button.click()
+        await this.page.adminusername_textbox.fill(username)
+        await this.page.adminpassword_textbox.fill(password)
+        await this.page.clientemail_textbox.fill(clientemail)
+        await this.page.submit_button.click()
     }
 }
